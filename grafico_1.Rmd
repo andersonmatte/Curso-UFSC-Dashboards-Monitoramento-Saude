@@ -1,0 +1,56 @@
+---
+title: "Untitled"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+require(plotly)
+```
+
+Row {data-width=650}
+-----------------------------------------------------------------------
+
+### Casos de dengue por semana epidemiológica
+
+```{r}
+# Criando o objeto {`grafico_1`}
+grafico_1 <- dengue |>
+  
+  # Contando número de casos por ano e semana epidemiológica
+  count(ano_epi, sem_epi) |>
+  
+  # Plotando visualização de gráfico por ano e semana epidemiológica
+  ggplot(aes(
+    x = sem_epi,
+    y = n,
+    color = factor(ano_epi)
+  )) +
+  
+  # Adicionando linhas
+  geom_line() +
+  
+  # Adicionando pontos
+  geom_point() +
+  
+  # Aplicando novo tema para o gráfico
+  theme_minimal() +
+  
+  # Adicionando rótulo para o eixo x
+  xlab("\nSemana epidemiológica") +
+  
+  # Adicionando rótulo para o eixo y
+  ylab("") +
+  
+  # Definindo o título da legenda
+  scale_color_discrete("Ano") +
+  
+  # Definindo o intervalo de valores dos rótulos do eixo x
+  scale_x_continuous(breaks = c(1, seq(5, 50, 5)))
+
+# Plotando um gráfico dinâmico
+ggplotly(grafico_1)
+```

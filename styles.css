@@ -1,0 +1,16 @@
+/* Reduz altura da navbar */
+.navbar {
+  min-height: 60px !important;
+}
+
+/* Controla o tamanho do logo */
+.navbar-brand img {
+  max-height: 40px !important;
+  width: auto !important;
+}
+
+/* Ajusta alinhamento do título */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
