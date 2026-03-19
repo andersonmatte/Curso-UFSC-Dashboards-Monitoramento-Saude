@@ -148,4 +148,6 @@ Este projeto faz parte de estudos voltados à:
 
 ## 📄 Licença
 
-Este projeto é de uso educacional.
+Este projeto é de uso educacional e foi baseado no curso Construção de paineis (dashboards) para monitoramento de indicadores de saúde da UFSC.
+
+https://grupos.moodle.ufsc.br/course/view.php?id=3906
