@@ -8,7 +8,7 @@ O objetivo é demonstrar como transformar dados epidemiológicos em informaçõe
 
 ## 🖼️ Preview do Dashboard
 
-![Dashboard de Dengue](dashboard.jpg)
+![Dashboard de Dengue](dashboard.png)
 
 ---
 
